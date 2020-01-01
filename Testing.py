@@ -1,10 +1,22 @@
-f = open('Data.dat', 'w')
 import numpy as np
 
-n = int(input("Enter number of elements:"))
-d = int(input("Enter number of Dimension :"))
+f = open('Data.dat', 'w')
 
-random_matrix_array = np.random.rand(n, d)
+n = int(input("Enter number of Points:"))
+d = int(input("Enter number of Dimension :"))
+c = int(input("Enter number of Cluster :"))
+
+random_matrix_array = np.random.rand(n, d) * 1000
 print(random_matrix_array)
 
+f.write(" dimension = " + str(d) + ";\n")
+f.write(" nbPoints = " + str(n) + ";\n")
+f.write(" nbCluster = " + str(c) + ";\n")
+f.write("\n")
+f.write(" points  = [")
+f.write(','.join(str(i) for i in random_matrix_array))
+
+
 f.close()
+
+"HAHAHAHAHHA"
