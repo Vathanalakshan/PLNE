@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 
 f = open('Data.dat', 'w')
@@ -13,10 +15,8 @@ f.write(" dimension = " + str(d) + ";\n")
 f.write(" nbPoints = " + str(n) + ";\n")
 f.write(" nbCluster = " + str(c) + ";\n")
 f.write("\n")
-f.write(" points  = [")
-f.write(','.join(str(i) for i in random_matrix_array))
 
-
+f.write(" points  = ")
+f.write(str(random_matrix_array.tolist()))
+f.write(";")
 f.close()
-
-"HAHAHAHAHHA"
