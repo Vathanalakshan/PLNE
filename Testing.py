@@ -1,5 +1,3 @@
-import json
-
 import numpy as np
 
 f = open('Data.dat', 'w')
