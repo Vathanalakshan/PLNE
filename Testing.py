@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 f = open('Data.dat', 'w')
 
@@ -18,3 +19,13 @@ f.write(" points  = ")
 f.write(str(random_matrix_array.tolist()))
 f.write(";")
 f.close()
+plt.scatter(random_matrix_array[:, 0],random_matrix_array[:, 1])
+print(random_matrix_array[:, 0])
+print(random_matrix_array[:, 1])
+
+plt.title('Nuage de points')
+plt.xlabel('x1')
+plt.ylabel('x2')
+
+plt.savefig('Points.png')
+plt.show()
